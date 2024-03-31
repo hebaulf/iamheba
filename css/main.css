@@ -1,0 +1,754 @@
+html, body {
+	max-width: 100%;
+	font-family: "Helvetica", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: lighter;
+	font-size: 10px;
+	background-color: rgb(192,222,196);
+	margin: 0;
+	padding: 0;
+}
+
+
+/* Fonts */
+
+	h1, h2, h3, h4, h5, p {
+		color: rgb(28,68,69);
+		margin: 0;
+		padding: 0;
+	}
+
+	h1 { font-size: 4.8em; font-weight: bold; padding-bottom: .3em;}
+	h2 { font-size: 2.8em; }
+	h3 { font-size: 1.6em; }
+	h4 { font-size: 1.4em; line-height: 1.2; }
+	h5 { font-size: 1.2em; line-height: 2; }
+	p  { font-size: 2em; line-height: 1.6; }
+
+	a { text-decoration: none; }
+
+
+/* Bubbles */
+
+.bubble-wrap {
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 800px;
+}
+
+.image-bubbles {
+	margin-top: -300px;
+	margin-left: -290px;
+}
+
+	.bubble1,
+	.bubble2,
+	.bubble3,
+	.bubble4 {
+		position: absolute;
+		background-color: rgba(255,255,255,0.3);
+		border-radius: 50%;
+		z-index: 100;
+	}
+
+	.bubble1 {
+		height: 900px;
+		width: 900px;
+		margin-top: 0px;
+		margin-left: 0px;
+	}
+
+	.bubble2 {
+		height: 660px;
+		width: 660px;
+		margin-top: 120px;
+		margin-left: 120px;
+	}
+
+	.bubble3 {
+		height: 400px;
+		width: 400px;
+		margin-top: 250px;
+		margin-left: 250px;
+	}
+
+	.bubble4 {
+		height: 200px;
+		width: 200px;
+		margin-top: 350px;
+		margin-left: 350px;
+		background-color: rgb(255,255,255);
+	}
+
+	.portrait {
+		position: absolute;
+		height: 180px;
+		width: 180px;
+		margin-top: 360px;
+		margin-left: 360px;
+		z-index: 200;
+	}
+
+
+
+/* Bubble pulse */
+
+@-webkit-keyframes pulse_animation {
+	0% { -webkit-transform: scale(0); }
+	80% { -webkit-transform: scale(1.2); }
+	100% { -webkit-transform: scale(1); }
+}
+
+@-moz-keyframes pulse_animation {
+	0% { -moz-transform: scale(0); }
+	80% { -moz-transform: scale(1.2); }
+	100% { -moz-transform: scale(1); }
+}
+
+.pulse,
+.pulse.one {
+	-webkit-animation-name: 'pulse_animation';
+	   -moz-animation-name: pulse_animation;
+	-webkit-animation-duration: 600ms;
+	   -moz-animation-duration: 600ms;
+	-webkit-transform-origin:50% 50%;
+	   -moz-transform-origin:50% 50%;
+	-webkit-animation-iteration-count: 1;
+	   -moz-animation-iteration-count: 1;
+	-webkit-animation-timing-function: linear;
+	   -moz-animation-timing-function: linear;
+}
+
+.pulse.two {
+	-webkit-animation-duration: 900ms;
+	   -moz-animation-duration: 900ms;
+		 	animation-duration: 900ms; }
+
+.pulse.three {
+	-webkit-animation-duration: 1200ms;
+	   -moz-animation-duration: 1200ms;
+	        animation-duration: 1200ms; }
+
+.pulse.four {
+	-webkit-animation-duration: 1500ms;
+	   -moz-animation-duration: 1500ms;
+			animation-duration: 1500ms; }
+
+/* End of  -  Bubbles */
+
+
+
+
+
+/* About Me */
+
+.aboutme {
+	position: relative;
+	float: right;
+	background: rgba(192,222,196,0.1);
+	height: auto;
+	margin: 350px 0 200px 0;
+	z-index: 300;
+}
+
+	.aboutme h1,
+	.aboutme p {
+		padding-right: 16%;
+	}
+
+		.aboutme p a {
+			text-decoration: none;
+			color: rgb(252,73,73);
+		}
+
+	.aboutme p a:hover {
+		color: rgb(252,25,25);
+	}
+
+
+
+/* fade-in animation */
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+   @-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+        @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fade-in {
+	opacity: 0;
+   -webkit-animation: fadeIn ease-in-out 1;
+      -moz-animation: fadeIn ease-in-out 1;
+           animation: fadeIn ease-in-out 1;
+   -webkit-animation-fill-mode: forwards;
+      -moz-animation-fill-mode: forwards;
+           animation-fill-mode: forwards;
+}
+
+.portrait.fade-in {
+	-webkit-animation-duration: 0.5s;
+       -moz-animation-duration: 0.5s;
+    	    animation-duration: 0.5s;
+	-webkit-animation-delay: 1.6s;
+	   -moz-animation-delay: 1.6s;
+		    animation-delay: 1.6s;
+}
+
+.aboutme.fade-in {
+	-webkit-animation-duration: 0.8s;
+       -moz-animation-duration: 0.8s;
+    	    animation-duration: 0.8s;
+	-webkit-animation-delay: 1.7s;
+	   -moz-animation-delay: 1.7s;
+		    animation-delay: 1.7s;
+}
+
+/* End of  -  About Me */
+
+
+
+
+
+/* Checklist */
+
+#checklist {
+	margin-bottom: 200px;
+	padding: 0;
+}
+
+	.check-heading {
+		margin-bottom: 20px;
+	}
+
+	.check1,
+	.check2 {
+		margin-bottom: 30px;
+		padding: 0;
+	}
+
+	.check-list ul {
+		padding: 0;
+		margin: 0;
+	}
+
+		.check-list ul li {
+			list-style: none;
+			line-height: 2;
+		}
+
+			.checkbox {
+				float: left;
+	    		width: 30px;
+				height: 30px;
+				margin: 10px 20px 10px 0;
+				padding-left: 0;
+				background-color: rgb(255,255,255);
+				border-radius: 5px;
+			}
+
+			.check-list p {
+				font-size: 2.2em;
+				line-height: 2.5em;
+			}
+
+			.check-list h4 {
+				font-family: SSStandard;
+				font-size: 2em;
+				margin-top: 5px;
+				margin-left: 5px;
+				color: rgb(255,73,73);
+			}
+
+
+
+
+/* Checklist - fade-in animation */
+
+.inViewPort .checked1 h4,
+.inViewPort .checked2 h4,
+.inViewPort .checked3 h4,
+.inViewPort .checked4 h4,
+.inViewPort .checked5 h4,
+.inViewPort .checked6 h4,
+.inViewPort .checked7 h4,
+.inViewPort .checked8 h4 {
+	opacity: 0;
+   -webkit-animation: fadeIn ease-in-out 1;
+      -moz-animation: fadeIn ease-in-out 1;
+           animation: fadeIn ease-in-out 1;
+   -webkit-animation-fill-mode: forwards;
+      -moz-animation-fill-mode: forwards;
+           animation-fill-mode: forwards;
+   -webkit-animation-duration: 0.5s;
+      -moz-animation-duration: 0.5s;
+   	       animation-duration: 0.5s;
+}
+
+.inViewPort .checked1 h4 {
+	-webkit-animation-delay: 0.4s;
+       -moz-animation-delay: 0.4s;
+	        animation-delay: 0.4s;
+	    }
+
+.inViewPort .checked2 h4 {
+	-webkit-animation-delay: 0.8s;
+       -moz-animation-delay: 0.8s;
+	        animation-delay: 0.8s;
+	    }
+
+.inViewPort .checked3 h4 {
+	-webkit-animation-delay: 1.2s;
+       -moz-animation-delay: 1.2s;
+	        animation-delay: 1.2s;
+	    }
+
+.inViewPort .checked4 h4 {
+	-webkit-animation-delay: 1.6s;
+	   -moz-animation-delay: 1.6s;
+			animation-delay: 1.6s;
+		}
+
+.inViewPort .checked5 h4 {
+	-webkit-animation-delay: 2s;
+	   -moz-animation-delay: 2s;
+			animation-delay: 2s;
+		}
+
+.inViewPort .checked6 h4 {
+	-webkit-animation-delay: 2.4s;
+	   -moz-animation-delay: 2.4s;
+			animation-delay: 2.4s;
+		}
+
+.inViewPort .checked7 h4 {
+	-webkit-animation-delay: 2.8s;
+	   -moz-animation-delay: 2.8s;
+			animation-delay: 2.8s;
+		}
+
+.inViewPort .checked8 h4 {
+	-webkit-animation-delay: 3.2s;
+	   -moz-animation-delay: 3.2s;
+			animation-delay: 3.2s;
+		}
+
+/* End of  -  Checklist */
+
+
+
+
+
+/* Timeline */
+
+.timeline {
+	margin: 15px 0 200px 0;
+}
+
+.timeline-heading {
+	margin-bottom: 40px;
+	padding: 0;
+}
+
+.time-line {
+	padding: 0;
+}
+
+	.time-line hr {
+		float: left;
+		border: 4px solid rgb(255,255,255);
+		height: 450px;
+		width: 0;
+		margin-top: 15px;
+		margin-left: 6px;
+	}
+
+.time-line-dot {
+	padding: 0;
+}
+
+	.time-line-dot hr {
+		float: left;
+		border: 4px dotted rgb(255,255,255);
+		height: 80px;
+		width: 0;
+		margin-top: 470px;
+		margin-left: -8px;
+	}
+
+.marker {
+	margin-top: -30px;
+	margin-left: -31px;
+	padding: 0;
+}
+
+	.marker h4 {
+		font-size: 2.2em;
+		font-weight: 100;
+	}
+
+		.text1,
+		.text2,
+		.text3,
+		.text4,
+		.text5 {
+			margin-left: 60px;
+			margin-top: -55px;
+		}
+
+			.text1 br {
+				display: none;
+			}
+
+			.white-text h4 {
+				color: rgb(255,255,255);
+			}
+
+.line-marker {
+	-webkit-transform: scale(0);
+	   -moz-transform: scale(0);
+	-webkit-animation-fill-mode: forwards;
+	   -moz-animation-fill-mode: forwards;
+		 -o-animation-fill-mode: forwards;
+	width: 25px;
+	height: 25px;
+	background-color: rgb(255,255,255);
+	border-radius: 50%;
+	border: 6px solid rgb(255,255,255);
+	margin: 30px 0 30px 0;
+}
+
+	.fill {
+		background-color: rgb(255,73,73);
+	}
+
+
+
+/* Timeline - fade-in */
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+   @-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+        @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.inViewPort .text1,
+.inViewPort .text2,
+.inViewPort .text3,
+.inViewPort .text4,
+.inViewPort .text5 {
+	opacity: 0;
+	-webkit-animation: fadeIn ease-in-out 1;
+       -moz-animation: fadeIn ease-in-out 1;
+        	animation: fadeIn ease-in-out 1;
+	-webkit-animation-fill-mode: forwards;
+       -moz-animation-fill-mode: forwards;
+        	animation-fill-mode: forwards;
+}
+
+.inViewPort .text1 {
+	-webkit-animation-duration: 0.8s;
+	   -moz-animation-duration: 0.8s;
+			animation-duration: 0.8s;
+	-webkit-animation-delay: 0.1s;
+	   -moz-animation-delay: 0.1s;
+			animation-delay: 0.1s;
+}
+
+.inViewPort .text2 {
+	-webkit-animation-duration: 0.8s;
+	   -moz-animation-duration: 0.8s;
+			animation-duration: 0.8s;
+	-webkit-animation-delay: 0.4s;
+	   -moz-animation-delay: 0.4s;
+			animation-delay: 0.4s;
+}
+
+.inViewPort .text3 {
+	-webkit-animation-duration: 0.8s;
+	   -moz-animation-duration: 0.8s;
+			animation-duration: 0.8s;
+	-webkit-animation-delay: 0.8s;
+	   -moz-animation-delay: 0.8s;
+			animation-delay: 0.8s;
+}
+
+.inViewPort .text4 {
+	-webkit-animation-duration: 0.8s;
+	   -moz-animation-duration: 0.8s;
+			animation-duration: 0.8s;
+	-webkit-animation-delay: 1.2s;
+	   -moz-animation-delay: 1.2s;
+			animation-delay: 1.2s;
+}
+
+.inViewPort .text5 {
+	-webkit-animation-duration: 0.8s;
+       -moz-animation-duration: 0.8s;
+	        animation-duration: 0.8s;
+	-webkit-animation-delay: 1.6s;
+	   -moz-animation-delay: 1.6s;
+	        animation-delay: 1.6s;
+}
+
+
+/* Timeline - pulse */
+
+@-webkit-keyframes timeline-pulse_animation {
+	0% { -webkit-transform: scale(0); }
+	80% { -webkit-transform: scale(1.3); }
+	100% { -webkit-transform: scale(1); }
+}
+
+@-moz-keyframes timeline-pulse_animation {
+	0% { -moz-transform: scale(0); }
+	80% { -moz-transform: scale(1.3); }
+	100% { -moz-transform: scale(1); }
+}
+
+.inViewPort .line-marker {
+	-webkit-animation-name: 'timeline-pulse_animation';
+       -moz-animation-name: timeline-pulse_animation;
+    -webkit-animation-duration: 0.5s;
+       -moz-animation-duration: 0.5s;
+    -webkit-transform-origin: 50% 50%;
+       -moz-transform-origin: 50% 50%;
+    -webkit-animation-iteration-count: 1;
+       -moz-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-in-out;
+       -moz-animation-timing-function: ease-in-out;
+   }
+
+	.inViewPort .first {
+		-webkit-animation-delay: 0.1s;
+		   -moz-animation-delay: 0.1s;
+				animation-delay: 0.1s;
+			}
+
+	.inViewPort .second {
+		-webkit-animation-delay: 0.4s;
+		   -moz-animation-delay: 0.4s;
+				animation-delay: 0.4s;
+			}
+
+	.inViewPort .third {
+		-webkit-animation-delay: 0.8s;
+		   -moz-animation-delay: 0.8s;
+				animation-delay: 0.8s;
+			}
+
+	.inViewPort .fourth {
+		-webkit-animation-delay: 1.2s;s
+		   -moz-animation-delay: 1.2s;
+				animation-delay: 1.2s;
+			}
+
+	.inViewPort .fifth {
+		-webkit-animation-delay: 2s;
+		   -moz-animation-delay: 2s;
+				animation-delay: 2s;
+			}
+
+
+/* End of  -  Timeline */
+
+
+
+/* Contact me */
+
+.contact {
+	margin-bottom: 200px;
+}
+
+	.contact h2 {
+		text-align: center;
+		padding-bottom: 30px;
+	}
+
+	.contact p {
+		text-align: center;
+		padding-bottom: 60px;
+	}
+
+	.button {
+		width: 170px;
+		height: 50px;
+		margin: 0 auto;
+		background-color: rgb(255,73,73);
+		border: 1px solid rgb(255,73,73);
+		border-radius: 5px;
+	}
+
+		.button:hover {
+			background-color: rgb(255,40,40);
+			text-decoration: none;
+		}
+
+		.button:active {
+			background-color: rgb(255,117,117)
+		}
+
+		.button a h5 {
+			font-size: 20px;
+			font-weight: lighter;
+			text-align: center;
+			text-decoration: none;
+			color: rgb(255,255,255);
+			padding-top: 5px;
+		}
+
+			.button a:hover {
+				text-decoration: none;
+			}
+
+/* End of  -  Contact me */
+
+
+
+
+
+@media only screen and (min-width: 450px) {
+
+	.image-bubbles {
+		margin-top: -250px;
+		margin-left: -250px;
+	}
+
+	.aboutme {
+		margin-top: 400px;
+	}
+
+}
+
+@media only screen and (min-width: 830px) {
+
+	h1 { font-size: 7.4em; font-weight: bold; padding-bottom: .3em; }
+	h2 { font-size: 3.4em; }
+	h3 { font-size: 2.8em; }
+	h4 { font-size: 2em; font-weight: 100; line-height: 1.7; }
+	h5 { font-size: 1.3em; line-height: 2.2; }
+	p  { font-size: 2.3em; }
+
+	.image-bubbles {
+		margin-top: -250px;
+		margin-left: -190px;
+	}
+
+/* About me - medium */
+	.aboutme {
+		position: relative;
+		float: right;
+		background: rgba(192,222,196,0.1);
+		height: auto;
+		margin-top: 100px;
+		margin-bottom: 300px;
+		padding: 0;
+		z-index: 300;
+	}
+
+/* Checklist - medium */
+	.check-list h4 {
+		margin-top: 2px;
+	}
+
+/* Timeline - medium */
+	.timeline-heading {
+		margin-bottom: 20px;
+	}
+
+	.time-line hr {
+		border: 5px solid rgb(255,255,255);
+		width: 100%;
+		height: 0;
+	}
+
+	.time-line-dot hr {
+		border: 5px dotted rgb(255,255,255);
+		float: left;
+		width: 100%;
+		height: 0;
+		margin-top: 15px;
+		margin-left: 6px;
+	}
+
+	.marker {
+		margin-top: 30px;
+		padding-left: 15px;
+	}
+
+		.marker h4 {
+			font-size: 2.2em;
+		 	font-weight: 100;
+		}
+
+	.text1,
+	.text2,
+	.text3,
+	.text4,
+	.text5 {
+		margin-left: 10px;
+		margin-top: 0;
+	}
+
+		.text1 br {
+			display: inline;
+		}
+
+	.line-marker {
+		width: 30px;
+	   height: 30px;
+	   border: 7px solid rgb(255,255,255);
+	   margin: -55px 0 20px 0;
+	}
+
+	.fill {
+		background-color: rgb(255,73,73);
+	}
+
+/* Contact - medium */
+	.contact h2 { padding-bottom: 40px; }
+	.contact p { padding-bottom: 60px; }
+
+	.button {
+		width: 220px;
+		height: 70px;
+	}
+
+		.button a h5 {
+			font-size: 26px;
+			font-weight: lighter;
+			padding-top: 5px;
+		}
+}
+
+
+@media only screen and (min-width: 1200px) {
+	h1 { font-size: 9.6em; line-height: 1.2em; }
+	h2 { font-size: 3.8em; }
+	h3 { font-size: 3.2em; }
+	h4 { font-size: 2.4em; }
+	h5 { font-size: 1.8em; }
+	p  { font-size: 2.5em; line-height: 1.8em; }
+
+	.image-bubbles {
+		margin-top: -180px;
+		margin-left: -220px;
+	}
+
+	.aboutme {
+		margin-top: 150px;
+	}
+
+		.aboutme h1,
+		.aboutme p {
+			padding-right: 80px;
+			padding-left: 0;
+		}
+
+	.check-list p {
+		font-size: 2.6em;
+		line-height: 2.3em;
+	}
+}
+
+
+
+
+
